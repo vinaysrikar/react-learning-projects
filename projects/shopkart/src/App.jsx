@@ -1,21 +1,22 @@
-import ProductCard from './components/ProductCard'
-import './App.css'
+import products from "./data/products";
+import ProductCard from "./components/ProductCard";
+import SectionHeader from "./components/SectionHeader";
 
 function App() {
-return (
-<> <header className="header"> <h1>ShopKart</h1> <p>Mini storefront — built while learning React</p> </header>
+  return (
+    <main>
+      <SectionHeader title="Featured Products" />
 
-
-  <main className="product-grid">
-    <ProductCard />
-    <ProductCard />
-    <ProductCard />
-    <ProductCard />
-  </main>
-</>
-
-
-)
+      <div className="product-grid">
+        {products.map((product) => (
+          <ProductCard
+            key={product.id}
+            product={product}
+          />
+        ))}
+      </div>
+    </main>
+  );
 }
 
-export default App
+export default App;

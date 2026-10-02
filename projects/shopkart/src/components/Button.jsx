@@ -1,7 +1,10 @@
 function Button() {
-return ( <button type="button">
-Add to Cart </button>
+  const handleClick = () => {
+    alert("Added to cart!");
+  }
+return ( 
+      <button type="button" onClick={handleClick}>Add to Cart </button>
 )
 }
 
-export default Button
+export default Button;

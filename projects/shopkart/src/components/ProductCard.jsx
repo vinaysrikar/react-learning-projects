@@ -1,3 +1,23 @@
+import Button from "./Button"
+const ProductCard = ({image,name,price}) => {
+  return (
+     <div className="card">
+      <div className="card-image">{image}</div>
+      <h3>{name}</h3>
+      <p className="price">{price}</p>
+      <Button />
+    </div>
+
+     
+  )
+}
+
+export default ProductCard;
+
+
+
+
+
 //import Button from './Button'
 
 // function ProductCard() {
@@ -11,18 +31,18 @@
 
 // export default ProductCard
 
-function ProductCard({ product }) {
-  return (
-    <div className="product-card">
-      <div className="product-emoji">{product.emoji}</div>
+// function ProductCard({ product }) {
+//   return (
+//     <div className="product-card">
+//       <div className="product-emoji">{product.emoji}</div>
 
-      <h3>{product.name}</h3>
+//       <h3>{product.name}</h3>
 
-      <p>{product.category}</p>
+//       <p>{product.category}</p>
 
-      <strong>₹{product.price}</strong>
-    </div>
-  );
-}
+//       <strong>₹{product.price}</strong>
+//     </div>
+//   );
+// }
 
-export default ProductCard;
+// export default ProductCard;

@@ -1,11 +1,11 @@
 import Button from "./Button"
-const ProductCard = ({image,name,price}) => {
+const ProductCard = ({image,name,price,addToCart}) => {
   return (
      <div className="card">
       <div className="card-image">{image}</div>
       <h3>{name}</h3>
       <p className="price">{price}</p>
-      <Button />
+      <Button   addToCart={addToCart}/>
     </div>
 
      
